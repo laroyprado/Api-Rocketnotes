@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       filename: path.resolve(__dirname, "src", "database", "database.db"),
     },
-    poo: {
+    pool: {
       afterCreate: (conn, cb) => conn.run("PRAGMA foreing_keys = ON", cb),
     },
     migrations: {

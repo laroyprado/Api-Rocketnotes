@@ -50,6 +50,11 @@ class NotesController {
 
   async delete(request, response) {
     const { id } = request.params;
+
+    await knex("tags").where({ note_id: id }).delete();
+
+    await knex("link").where({ note_id: id }).delete();
+
     await knex("notes").where({ id }).delete();
 
     return response.json();

@@ -4,6 +4,7 @@ exports.up = (knex) =>
     table.text("url");
     table
       .integer("note_id")
+      .unsigned()
       .references("id")
       .inTable("notes")
       .onDelete("CASCADE");
