@@ -7,7 +7,7 @@ module.exports = {
       filename: path.resolve(__dirname, "src", "database", "database.db"),
     },
     poo: {
-      afterCreate: (conn, cb) => conn.run("PRAGMA foreing_keys = ON", cb ),
+      afterCreate: (conn, cb) => conn.run("PRAGMA foreing_keys = ON", cb),
     },
     migrations: {
       directory: path.resolve(
@@ -18,7 +18,7 @@ module.exports = {
         "migrations"
       ),
     },
-    dds,
+
     useNullAsDefault: true,
   },
 };
